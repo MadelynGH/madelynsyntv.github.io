@@ -34,8 +34,16 @@
             }
 
             .header {
+                position: fixed;
+                top: 0px;
                 border-bottom: 1px solid rgb(204, 204, 204);
                 height: 100%;
+            }
+
+            #log-in-button {
+                border: 1px solid rgb(79, 180, 187);
+                border-radius: 3px;
+                background-color: rgb(79, 180, 187);
             }
 
         </style>
@@ -44,9 +52,14 @@
     <body>
         <div class="header">
             <img id="logo" src="https://github.com/MadelynGH/madelynsyntv.github.io/blob/main/Main%20Logo.png?raw=true">
+            <a href="login.html" id="log-in-button">Log in</a>
         </div>
 
         <div class="content">
         </div>
+
+        <script>
+            var loggedIn = false;
+        </script>
     </body>
 </html>
