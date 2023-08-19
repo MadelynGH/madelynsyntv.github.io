@@ -42,18 +42,29 @@
                 
             }
 
-            #log-in-button {
+            #login-button-container {
+                position: fixed;
+                top: 0;
+                align-items: center;
+                flex-flow: row wrap;
+                align-content: flex-start;
+                height: 120px;
+                width: 100%;
                 display: flex;
                 justify-content: flex-end;
+            }
+
+            #log-in-button {
+                margin-right: 50px;
 
                 border: 1px solid rgb(87, 216, 225);
                 border-radius: 10px;
                 background-color: rgb(87, 216, 225);
-                padding: 6px;
+                padding: 20px;
 
                 color: rgb(170, 0, 255);
                 text-decoration: none;
-                font-size: 6px;
+                font-size: 20px;
                 font-family: Luckiest Guy, cursive;
             }
 
@@ -63,7 +74,10 @@
     <body>
         <div class="header">
             <img id="logo" src="https://github.com/MadelynGH/madelynsyntv.github.io/blob/main/Main%20Logo.png?raw=true">
-            <a href="login.html" id="log-in-button">Log in</a>
+            <div id="login-button-container">
+                <a href="login.html" id="log-in-button">Log in</a>
+            </div>
+
         </div>
 
         <div class="content">
