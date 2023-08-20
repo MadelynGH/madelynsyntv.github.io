@@ -53,6 +53,14 @@
                 background-color: rgb(200, 200, 200);
             }
 
+            .textbox-full-container {
+                width: fit-content;
+            }
+
+            .textbox-label-container {
+                width: 100%;
+                justify-content: flex-start;
+            }
         </style>
     </head>
 
@@ -67,9 +75,16 @@
             <h1 class="luckiest-guy">Log in</h1>
 
             <div class="break"></div>
+            
+            <div class="textbox-full-container">
+                <div class="textbox-label-container">
+                    <label for="username-textbox" class="luckiest-guy">Username</label>
+                </div>
 
-            <label for="username-textbox">Username</label>
-            <input type="text" class="luckiest-guy" id="username-textbox" placeholder="Username">
+                <div class="break"></div>
+
+                <input type="text" class="luckiest-guy" id="username-textbox" placeholder="Username">
+            </div>
         </div>
 
     </body>
