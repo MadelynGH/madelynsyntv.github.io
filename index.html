@@ -20,6 +20,7 @@
             }
 
             #logo {
+                z-index: 100;
                 margin-left: 5px;
                 margin-top: 5px;
                 height: 100px;
@@ -27,6 +28,10 @@
                 align-self: center;
                 justify-content: flex-start;
                 align-content: flex-start;
+            }
+
+            #logo-link {
+                z-index: 99;
             }
 
             .header {
@@ -72,7 +77,7 @@
 
     <body>
         <div class="header">
-            <a href="https://tv.madelynsyn.com/">
+            <a href="https://tv.madelynsyn.com/" id="logo-link">
                 <img id="logo" src="https://github.com/MadelynGH/madelynsyntv.github.io/blob/main/Main%20Logo.png?raw=true">
             </a>
             <div id="login-button-container">
