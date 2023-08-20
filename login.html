@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -8,69 +9,42 @@
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');            
 
-            html {
-                height: 100%;
-            }
-
             body {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                height: 100%;
             }
-
-            /* #background-image {
-                position: absolute;
-                background-image: url("https://raw.githubusercontent.com/MadelynGH/madelynsyntv.github.io/e1ac9b1e10a20ce82c7c8c396febdce8fe941575/Favicon.png");
-                background-size: 500px;
-                opacity: 0.5;
-
-                width: 100%;
-                height: 100%;
-            } */
-
             #logo-container {
                 display: flex;
                 justify-content: center;
                 margin-top: 10px;
             }
-
             #login-container {
-                /* position: relative; */
                 display: flex;
                 width: fit-content;
                 height: fit-content;
-                margin-top: 80px;
-
-                background-color: white;
-
+                margin-top: 100px;
                 flex-flow: row wrap;
                 border: 1px solid lightgray;
                 border-radius: 7px;
                 justify-content: center;
             }
-
             .break {
                 flex-basis: 100%;
                 height: 0;
             }
-
             .luckiest-guy {
                 font-family: Luckiest Guy, cursive;
             }
-
             #username-textbox {
                 margin-bottom: 8px;
                 padding: 7px;
-
                 border: 2px solid rgb(230, 230, 230);
                 border-radius: 5px;
             }
-
             #password-textbox {
                 margin-bottom: 8px;
                 padding: 7px;
-
                 border: 2px solid rgb(230, 230, 230);
                 border-radius: 5px;
             }
@@ -79,65 +53,47 @@
                 outline: none;
                 background-color: rgb(230, 230, 230);
             }
-
             #password-textbox:focus {
                 outline: none;
                 background-color: rgb(230, 230, 230);
             }
-
             .textbox-full-container {
                 width: fit-content;
             }
-
             .textbox-label-container {
                 width: 100%;
                 justify-content: flex-start;
             }
-
             .textbox-label {
                 color: gray;
                 font-size: 12px;
             }
         </style>
     </head>
-
     <body>
-        
-        <!-- <div id="background-image"></div> -->
-
         <div id="login-container">
             <div id="logo-container">
                 <img src="https://github.com/MadelynGH/madelynsyntv.github.io/blob/main/Main%20Logo%20(Small%20version).png?raw=true" height="80px">
             </div>
-
             <div class="break"></div>
-
             <h1 class="luckiest-guy">Log in</h1>
-
             <div class="break"></div>
             
             <div class="textbox-full-container">
                 <div class="textbox-label-container">
                     <label for="username-textbox" class="luckiest-guy textbox-label">Username</label>
                 </div>
-
                 <div class="break"></div>
-
                 <input type="text" class="luckiest-guy" id="username-textbox">
             </div>
-
             <div class="break"></div>
-
             <div class="textbox-full-container">
                 <div class="textbox-label-container">
                     <label for="password-textbox" class="luckiest-guy textbox-label">Password</label>
                 </div>
-
                 <div class="break"></div>
-
                 <input type="password" class="luckiest-guy" id="password-textbox">
             </div>
         </div>
-
     </body>
 </html>
