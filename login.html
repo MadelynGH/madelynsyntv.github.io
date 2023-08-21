@@ -72,11 +72,15 @@
     </head>
     <body>
         <div id="login-container">
+
             <div id="logo-container">
                 <img src="https://github.com/MadelynGH/madelynsyntv.github.io/blob/main/Main%20Logo%20(Small%20version).png?raw=true" height="80px">
             </div>
+
             <div class="break"></div>
+
             <h1 class="luckiest-guy">Log in</h1>
+
             <div class="break"></div>
             
             <div class="textbox-full-container">
@@ -86,14 +90,68 @@
                 <div class="break"></div>
                 <input type="text" class="luckiest-guy" id="username-textbox">
             </div>
+
             <div class="break"></div>
+
             <div class="textbox-full-container">
                 <div class="textbox-label-container">
                     <label for="password-textbox" class="luckiest-guy textbox-label">Password</label>
                 </div>
                 <div class="break"></div>
                 <input type="password" class="luckiest-guy" id="password-textbox">
+
             </div>
+
+
         </div>
+        <script>
+            var submittedUsername;
+            var submittedPassword;
+            var usernameIsCorrect;
+            var passwordIsCorrect;
+
+            var logIn = function() {
+
+            };
+
+            var infoIsWrong = function() {
+                document.getElementById("password-textbox").value = "";
+            };
+
+            var checkUsername = function() {
+                if (submittedUsername.toLowerCase() === "peterbrobro") {
+                    usernameIsCorrect = true;
+                }
+                else {
+                    usernameIsCorrect = false;
+                };
+            };
+
+            var checkPassword = function() {
+                if (usernameIsCorrect) {
+                    if (submittedUsername.toLowerCase() === "peterbrobro") {
+                        if (submittedPassword === "k9sqyvb6cr7") {
+                            logIn();
+                        } 
+                        else {
+                            infoIsWrong();
+                        };
+                    };
+                }
+                else {
+                    infoIsWrong();
+                };
+            };
+
+            var submitInfo = function() {
+                submittedUsername = document.getElementById("username-textbox").value;
+                submittedPassword = document.getElementById("password-textbox").value;
+
+                checkUsername();
+                checkPassword();
+
+            };
+
+        </script>
     </body>
 </html>
