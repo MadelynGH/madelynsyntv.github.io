@@ -69,6 +69,7 @@
                 font-size: 12px;
             }
             #submit-button {
+                margin: 20px;
                 border: 1px solid rgb(87, 216, 225);
                 border-radius: 10px;
                 background-color: rgb(87, 216, 225);
@@ -77,6 +78,9 @@
                 color: rgb(170, 0, 255);
                 text-decoration: none;
                 font-size: 20px;
+            }
+            #incorrect-message {
+                color: red;
             }
         </style>
     </head>
@@ -122,7 +126,7 @@
 
             <div class="break"></div>
 
-            <div class="text-container">
+            <div class="text-container"></div>
 
             </div>
 
@@ -141,7 +145,7 @@
                 document.getElementById("password-textbox").value = "";
                 document.getElementById("username-textbox").value = "";
                 
-                document.getElementById("text-container").innerHTML = "<p>The username/password you entered is incorrect.</p>";
+                document.getElementById("text-container").innerHTML = '<p class="luckiest-guy" id="incorrect-message">The username/password you entered is incorrect.</p>';
             };
 
             var checkUsername = function() {
