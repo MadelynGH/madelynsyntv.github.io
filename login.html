@@ -68,6 +68,16 @@
                 color: gray;
                 font-size: 12px;
             }
+            #submit-button {
+                border: 1px solid rgb(87, 216, 225);
+                border-radius: 10px;
+                background-color: rgb(87, 216, 225);
+                padding: 20px;
+
+                color: rgb(170, 0, 255);
+                text-decoration: none;
+                font-size: 20px;
+            }
         </style>
     </head>
     <body>
@@ -83,25 +93,38 @@
 
             <div class="break"></div>
             
-            <div class="textbox-full-container">
-                <div class="textbox-label-container">
-                    <label for="username-textbox" class="luckiest-guy textbox-label">Username</label>
+            <div id="textboxes">
+                <div class="textbox-full-container">
+                    <div class="textbox-label-container">
+                        <label for="username-textbox" class="luckiest-guy textbox-label">Username</label>
+                    </div>
+                    <div class="break"></div>
+                    <input type="text" class="luckiest-guy" id="username-textbox">
                 </div>
+    
                 <div class="break"></div>
-                <input type="text" class="luckiest-guy" id="username-textbox">
+    
+                <div class="textbox-full-container">
+                    <div class="textbox-label-container">
+                        <label for="password-textbox" class="luckiest-guy textbox-label">Password</label>
+                    </div>
+                    <div class="break"></div>
+                    <input type="password" class="luckiest-guy" id="password-textbox">
+    
+                </div>
             </div>
 
             <div class="break"></div>
 
-            <div class="textbox-full-container">
-                <div class="textbox-label-container">
-                    <label for="password-textbox" class="luckiest-guy textbox-label">Password</label>
-                </div>
-                <div class="break"></div>
-                <input type="password" class="luckiest-guy" id="password-textbox">
-
+            <div id="button-container">
+                <button onclick="submitInfo();" id="submit-button">Log in</button>
             </div>
 
+            <div class="break"></div>
+
+            <div class="text-container">
+
+            </div>
 
         </div>
         <script>
@@ -116,6 +139,9 @@
 
             var infoIsWrong = function() {
                 document.getElementById("password-textbox").value = "";
+                document.getElementById("username-textbox").value = "";
+                
+                document.getElementById("text-container").innerHTML = "<p>The username/password you entered is incorrect.</p>";
             };
 
             var checkUsername = function() {
