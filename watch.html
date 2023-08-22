@@ -3,6 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>Home - Madelynsyn TV</title>
+        <link rel="icon" type="image/x-icon" href="https://github.com/MadelynGH/madelynsyntv.github.io/blob/main/Favicon.png?raw=true">
+
         <style>
             
         </style>
@@ -10,7 +12,9 @@
     <body>
 
         <script>
-
+            if (document.cookie.indexOf("loggedIn=true") === -1){ // If that condition is true, the user is NOT logged in.
+                location.replace("index.html");
+            };
         </script>
     </body>
 </html>
