@@ -135,13 +135,19 @@
 
         </div>
         <script>
+
             var submittedUsername;
             var submittedPassword;
             var usernameIsCorrect;
             var passwordIsCorrect;
 
-            var logIn = function() {
+        if (!(document.cookie.indexOf("loggedIn=true") === -1)) { // If that condition is true, that means the user IS logged in.
+                location.replace("watch.html");
+            };
 
+            var logIn = function() {
+                document.cookie = "loggedIn=true; path=/";
+                location.replace("watch.html");
             };
 
             var infoIsWrong = function() {
