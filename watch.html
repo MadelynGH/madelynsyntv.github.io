@@ -6,10 +6,24 @@
         <link rel="icon" type="image/x-icon" href="https://github.com/MadelynGH/madelynsyntv.github.io/blob/main/Favicon.png?raw=true">
 
         <style>
-            
+            @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');            
+
+            body {
+                background-color: rgb(64, 0, 103);
+            }
+
+            .luckiest-guy {
+                font-family: Luckiest Guy, cursive;
+            }
+
+            #header {
+                color: white;
+            }
         </style>
     </head>
     <body>
+
+        <h1 id="header" class="luckiest-guy">What do you want to watch today?</h1>
 
         <script>
             if (document.cookie.indexOf("loggedIn=true") === -1){ // If that condition is true, the user is NOT logged in.
