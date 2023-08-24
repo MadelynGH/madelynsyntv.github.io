@@ -141,13 +141,13 @@
             var usernameIsCorrect;
             var passwordIsCorrect;
 
-        if (!(document.cookie.indexOf("loggedIn=true") === -1)) { // If that condition is true, that means the user IS logged in.
-                location.replace("watch.html");
+            if (!(document.cookie.indexOf("loggedIn=true") === -1)) { // If that condition is true, that means the user IS logged in.
+                location.replace("/watch/home.html");
             };
 
             var logIn = function() {
                 document.cookie = "loggedIn=true; path=/";
-                location.replace("watch.html");
+                location.replace("/watch/home.html");
             };
 
             var infoIsWrong = function() {
