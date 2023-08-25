@@ -65,6 +65,7 @@
             }
 
             .season-button {
+                display: inline-block;
                 color: white;
                 font-size: 25px;
             }
@@ -103,6 +104,14 @@
             if (document.cookie.indexOf("loggedIn=true") === -1){ // If that condition is true, the user is NOT logged in.
                 location.replace("https://tv.madelynsyn.com/");
             };
+
+            var selectedSeason = document.getElementById("season-1");
+
+            selectedSeason.style.color = "white";
+            
+            document.getElementById("season-1").addEventListener("click", function() {
+                
+            });
         </script>
     </body>
 </html>
