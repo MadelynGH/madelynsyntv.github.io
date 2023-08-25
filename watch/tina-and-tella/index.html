@@ -95,7 +95,7 @@
             </div>
 
             <div id="episode-list">
-
+                <!--Add HTML in the JS code in the updateEpisodes function-->
             </div>
         </div>
 
@@ -106,11 +106,30 @@
             };
 
             var selectedSeason = document.getElementById("season-1");
+            
+            var episodeList = document.getElementById("episode-list");
+            var season1 = document.getElementById("season-1"); // Add one of these for each season, making changes nessecary
+
+            /* HTML template for the episodes
+                    
+            */
+
+            var season1Episodes = `
+                <!-- Add the code for the Season 1 episodes here. A template is available above.-->
+            `; // Add one of these for each season.
 
             selectedSeason.style.color = "white";
             
-            document.getElementById("season-1").addEventListener("click", function() {
-                
+            var updateEpisodes = function() {
+                if (selectedSeason === season1) { // Add one of these for each season, making changes nessecary
+                    episodeList.innerHTML = season1Episodes;
+                };
+            };
+
+            season1.addEventListener("click", function() { // Add one of these for each season, making changes nessecary
+                selectedSeason.style.color = "rgb(149, 174, 237)";
+                selectedSeason = season1;
+                updateEpisodes();
             });
         </script>
     </body>
