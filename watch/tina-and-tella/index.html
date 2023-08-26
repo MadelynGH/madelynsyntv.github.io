@@ -94,6 +94,8 @@
                 <h6 id="season-1" class="season-button nerko-one">Season 1</h6>
             </div>
 
+            <div class="column-break"></div>
+
             <div id="episode-list">
                 <!--Add HTML in the JS code in the updateEpisodes function-->
             </div>
@@ -106,25 +108,28 @@
             };
 
             var selectedSeason = document.getElementById("season-1");
-            
+
             var episodeList = document.getElementById("episode-list");
             var season1 = document.getElementById("season-1"); // Add one of these for each season, making changes nessecary
 
             /* HTML template for the episodes
-                    
+                    <iframe src="https://www.youtube.com/embed/XcSuz10nfZE?si=VS4q_g0Uoxp56omc" frameborder="0" allowfullscreen="true">
+                    </iframe>
             */
 
             var season1Episodes = `
-                <!-- Add the code for the Season 1 episodes here. A template is available above.-->
-            `; // Add one of these for each season.
+                <iframe src="https://www.youtube.com/embed/XcSuz10nfZE?si=VS4q_g0Uoxp56omc" frameborder="0" allowfullscreen="true">
+                    </iframe>            `; // Add one of these for each season.
 
-            selectedSeason.style.color = "white";
             
             var updateEpisodes = function() {
                 if (selectedSeason === season1) { // Add one of these for each season, making changes nessecary
                     episodeList.innerHTML = season1Episodes;
                 };
             };
+
+            selectedSeason.style.color = "white";
+            updateEpisodes();
 
             season1.addEventListener("click", function() { // Add one of these for each season, making changes nessecary
                 selectedSeason.style.color = "rgb(149, 174, 237)";
