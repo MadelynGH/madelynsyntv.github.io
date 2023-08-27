@@ -132,18 +132,21 @@
 
             var season1Episodes = `
                 <iframe src="https://www.youtube.com/embed/XcSuz10nfZE?si=VS4q_g0Uoxp56omc" frameborder="0" allowfullscreen="true">
-                    </iframe>`; // Add one of these for each season.
+                    </iframe>`; // Add one of these for each season. (making changes nessecary)
 
             
-            var updateEpisodes = function(seasonEpisodeVariable) {
-                    episodeList.innerHTML = seasonEpisodeVariable;
+            var updateEpisodes = function() {
+                    if (selectedSeason === season1) { // Add one of these for each season. (making changes nessecary)
+                        episodeList.innerHTML = season1
+                    }
+
             };
 
             var changeSelectedSeason = function(season) {
                 selectedSeason.style.color = "rgb(149, 174, 237)";
                 selectedSeason = season;
                 selectedSeason.style.color = "white";
-                updateEpisodes(season + "Episode");
+                updateEpisodes();
             };
 
             changeSelectedSeason(season1);
