@@ -135,16 +135,15 @@
                     </iframe>`; // Add one of these for each season.
 
             
-            var updateEpisodes = function(season) {
-                    episodeList.innerHTML = season + "Episodes";
-                    console.log(season + "Episodes");
+            var updateEpisodes = function(seasonEpisodeVariable) {
+                    episodeList.innerHTML = seasonEpisodeVariable;
             };
 
             var changeSelectedSeason = function(season) {
                 selectedSeason.style.color = "rgb(149, 174, 237)";
                 selectedSeason = season;
                 selectedSeason.style.color = "white";
-                updateEpisodes(season);
+                updateEpisodes(season + "Episode");
             };
 
             changeSelectedSeason(season1);
