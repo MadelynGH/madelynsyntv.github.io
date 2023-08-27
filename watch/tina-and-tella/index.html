@@ -8,68 +8,55 @@
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');            
             @import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
-
             body {
                 background-color: rgb(0, 27, 71);
             }
-
             .luckiest-guy {
                 font-family: Luckiest Guy, cursive;
             }
-
             .nerko-one {
                 font-family: 'Nerko One', cursive;
             }
-
             .column-break {
                 flex-basis: 100%;
                 width: 0;
             }
-
             .row-break {
                 flex-basis: 100%;
                 height: 0;
             }
-
             #title-container {
                 display: flex;
                 margin-top: 0;
                 width: 100%;
                 justify-content: center;
             }
-
             #title {
                 width: 100%;
             }
-
             #x-icon-container {
                 display: flex;
                 position: relative;
                 justify-content: flex-start;
             }
-
             #x-icon {
                 height: 15px;
                 margin-top: 10px;
                 margin-left: 10px;
             }
-
             #x-icon:hover {
                 cursor:pointer;
             }
-
             #season-episode-list {
                 display: flex;
                 flex-flow: row nowrap;
                 width: 100%;
             }
-
             .season-button {
                 display: inline-block;
                 color: white;
                 font-size: 25px;
             }
-
             .season-button:hover {
                 cursor: pointer;
             }
@@ -92,57 +79,44 @@
     </head>
 
     <body>
-
         <div id="x-icon-container">
             <a href="/watch/">
                 <img src="https://github.com/MadelynGH/madelynsyntv.github.io/blob/main/X.png?raw=true" id="x-icon">
             </a>
         </div>
-
         <div id="title-container">
             <img id="title" src="https://github.com/MadelynGH/madelynsyntv.github.io/blob/main/watch/tina-and-tella/Tina%20and%20Tella%20Background%20Photo.png?raw=true">
         </div>
-
         <div id="season-episode-list">
             <div id="season-list">
                 <h6 id="season-1" class="season-button nerko-one">Season 1</h6>
             </div>
-
             <div id="episode-list">
                 <!--Add HTML in the JS code in the updateEpisodes function-->
             </div>
         </div>
-
-
         <script>
             if (document.cookie.indexOf("loggedIn=true") === -1){ // If that condition is true, the user is NOT logged in.
                 location.replace("https://tv.madelynsyn.com/");
             };
-
-
+            var selectedSeason = document.getElementById("season-1");
             var episodeList = document.getElementById("episode-list");
             var season1 = document.getElementById("season-1"); // Add one of these for each season, making changes nessecary
-
-            var selectedSeason;
-
             /* HTML template for the episodes
                     <iframe src="https://www.youtube.com/embed/XcSuz10nfZE?si=VS4q_g0Uoxp56omc" frameborder="0" allowfullscreen="true">
                     </iframe>
             */
-
             var season1Episodes = `
                 <iframe src="https://www.youtube.com/embed/XcSuz10nfZE?si=VS4q_g0Uoxp56omc" frameborder="0" allowfullscreen="true">
-                    </iframe>`; // Add one of these for each season. (making changes nessecary)
-
+                    </iframe>            `; // Add one of these for each season.
             
             var updateEpisodes = function() {
-                    if (selectedSeason === season1) { // Add one of these for each season. (making changes nessecary)
-                        episodeList.innerHTML = season1
-                    }
-
+                if (selectedSeason === season1) { // Add one of these for each season, making changes nessecary
+                    episodeList.innerHTML = season1Episodes;
+                };
             };
-
-
+            selectedSeason.style.color = "white";
+            updateEpisodes();
             season1.addEventListener("click", function() { // Add one of these for each season, making changes nessecary
                 selectedSeason.style.color = "rgb(149, 174, 237)";
                 selectedSeason = season1;
