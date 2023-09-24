@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Watch Exploring the Universe on Madelynsyn TV</title>
+        <link rel="icon" type="image/x-icon" href="https://github.com/MadelynGH/madelynsyntv.github.io/blob/main/Favicon.png?raw=true">
+        
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');            
+            @import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+            body {
+                background-color: rgb(0, 27, 71);
+            }
+            .luckiest-guy {
+                font-family: Luckiest Guy, cursive;
+            }
+            .nerko-one {
+                font-family: 'Nerko One', cursive;
+            }
+
+
+            .column-break {
+                flex-basis: 100%;
+                width: 0;
+            }
+
+            .row-break {
+                flex-basis: 100%;
+                height: 0;
+            }
+            #title-container {
+                display: flex;
+                margin-top: 0;
+                width: 100%;
+                justify-content: center;
+            }
+            #title {
+                width: 100%;
+            }
+            #x-icon-container {
+                display: flex;
+                position: relative;
+                justify-content: flex-start;
+            }
+            #x-icon {
+                height: 15px;
+                margin-top: 10px;
+                margin-left: 10px;
+            }
+            #x-icon:hover {
+                cursor:pointer;
+            }
+            #season-episode-list {
+                display: flex;
+                flex-flow: row nowrap;
+                width: 100%;
+            }
+            .season-button {
+                display: inline-block;
+                color: white;
+                font-size: 25px;
+            }
+            .season-button:hover {
+                cursor: pointer;
+            }
+
+            #episode-list {
+                display: flex;
+                flex-direction: column;
+
+                margin: 15px;
+            }
+
+            #season-list {
+                display: flex;
+                flex-direction: column;
+
+                margin: 15px;
+            }
+
+            .episode-name {
+                font-size: 20px;
+                color: white;
+                margin: 0px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div id="x-icon-container">
+            <a href="/watch/">
+                <img src="https://github.com/MadelynGH/madelynsyntv.github.io/blob/main/X.png?raw=true" id="x-icon">
+            </a>
+        </div>
+        <div id="title-container">
+            <img id="title" src="https://github.com/MadelynGH/madelynsyntv.github.io/blob/main/watch/empire-earlobe/Empire%20Earlobe%20Background%20Photo.png?raw=true">
+        </div>
+        <div id="season-episode-list">
+            <div id="season-list">
+                <h6 id="season-1" class="season-button nerko-one">Season 1</h6>
+            </div>
+            <div id="episode-list">
+                <!--Add HTML in the JS code in the updateEpisodes function-->
+            </div>
+        </div>
+        <script>
+            if (document.cookie.indexOf("loggedIn=true") === -1){ // If that condition is true, the user is NOT logged in.
+                location.replace("https://tv.madelynsyn.com/");
+            };
+            var selectedSeason = document.getElementById("season-1");
+            var episodeList = document.getElementById("episode-list");
+            var season1 = document.getElementById("season-1"); // Add one of these for each season, making changes nessecary
+            /* HTML template for the episodes
+                <div class="episode-div">
+                    <h6 class="episode-name luckiest-guy">Episode 1<h6>
+                    <div class="row-break"></div>
+                    <iframe src="https://www.youtube.com/embed/XcSuz10nfZE?si=VS4q_g0Uoxp56omc" frameborder="0" allowfullscreen="true">
+                    </iframe>
+                </div>
+            */
+            var season1Episodes = `
+
+                <div class="episode-div">
+                    <h6 class="episode-name nerko-one">Episode 1<h6>
+                    <div class="row-break"></div>
+                    <iframe src="https://www.youtube.com/embed/Wz2xMeO7uV4?si=cS7MSccTQLYMHzED" frameborder="0" allowfullscreen="true">
+                    </iframe>
+                </div>
+
+                `; // Add one of these for each season.
+
+            
+            var updateEpisodes = function() {
+                if (selectedSeason === season1) { // Add one of these for each season, making changes nessecary
+                    episodeList.innerHTML = season1Episodes;
+                };
+            };
+            selectedSeason.style.color = "white";
+            updateEpisodes();
+            season1.addEventListener("click", function() { // Add one of these for each season, making changes nessecary
+                selectedSeason.style.color = "rgb(149, 174, 237)";
+                selectedSeason = season1;
+                selectedSeason.style.color = "white";
+                updateEpisodes();
+            });
+        </script>
+    </body>
+</html>
