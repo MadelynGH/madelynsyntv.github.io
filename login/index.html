@@ -158,7 +158,7 @@
             };
 
             var checkUsername = function() {
-                if (submittedUsername.toLowerCase() === "peterbrobro") {
+                if (submittedUsername.toLowerCase() === "peterbrobro" || submittedUsername.toLowerCase() === "admin") {
                     usernameIsCorrect = true;
                 }
                 else {
@@ -171,11 +171,18 @@
                     if (submittedUsername.toLowerCase() === "peterbrobro") {
                         if (submittedPassword === "k9sqyvb6cr7") {
                             logIn();
-                        } 
-                        else {
+                        } else {
                             infoIsWrong();
-                        };
-                    };
+                        } 
+
+                    } else if (submittedUsername.toLowerCase() === "admin") {
+                        if (submittedPassword === "4adminuse") {
+                            logIn();
+                        } else {
+                            infoIsWrong();
+                        }
+                    }
+
                 }
                 else {
                     infoIsWrong();
