@@ -146,7 +146,12 @@
             };
 
             var logIn = function() {
-                document.cookie = "loggedIn=true; path=/";
+                document.cookie = "loggedIn=true; path=/; admin=false; path=/";
+                location.replace("/watch");
+            };
+
+            var logInAdmin = function() {
+                document.cookie = "loggedIn=true; path=/; admin=true; path=/";
                 location.replace("/watch");
             };
 
@@ -177,7 +182,7 @@
 
                     } else if (submittedUsername.toLowerCase() === "admin") {
                         if (submittedPassword === "4adminuse") {
-                            logIn();
+                            logInAdmin();
                         } else {
                             infoIsWrong();
                         }
