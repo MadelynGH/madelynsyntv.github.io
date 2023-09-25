@@ -146,12 +146,14 @@
             };
 
             var logIn = function() {
-                document.cookie = "loggedIn=true; path=/; admin=false; path=/";
+                document.cookie = "loggedIn=true; path=/";
+                document.cookie = "admin=false; path=/"
                 location.replace("/watch");
             };
 
             var logInAdmin = function() {
-                document.cookie = "loggedIn=true; path=/; admin=true; path=/";
+                document.cookie = "loggedIn=true; path=/;";
+                document.cookie = "admin=true; path=/"
                 location.replace("/watch");
             };
 
