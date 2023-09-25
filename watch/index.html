@@ -121,7 +121,7 @@
 
 
         <div id="header-text-container">
-            <h1 id="header-text" class="luckiest-guy">Watch Madelynsyn TV</h1>
+            <h1 id="header-text" class="luckiest-guy"></h1>
         </div>
 
         <div class="break"></div>
@@ -155,6 +155,8 @@
 
             if (document.cookie.indexOf("admin=true") !== -1) { // If that condition is true, the user IS the admin.
                 document.getElementById("header-text").innerHTML = "Watch Madelynsyn TV - You are currently logged into the admin account.";
+            } else {
+                document.getElementById("header-text").innerHTML = "Watch Madelynsyn TV";
             }
 
             var logOut = function() {
