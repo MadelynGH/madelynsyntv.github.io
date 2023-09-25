@@ -153,8 +153,12 @@
                 location.replace("https://tv.madelynsyn.com/");
             };
 
+            if (document.cookie.indexOf("admin=true") !== -1) { // If that condition is true, the user IS the admin.
+                document.getElementById("header-text").innerHTML = "Watch Madelynsyn TV - You are currently logged into the admin account.";
+            }
+
             var logOut = function() {
-                document.cookie = "loggedIn=; expires=Wed, 02 Jan 1970 00:00:00 UTC; path=/";
+                document.cookie = "loggedIn=; expires=Wed, 02 Jan 1970 00:00:00 UTC; path=/; admin=; expires=Wed, 02 Jan 1970 00:00:00 UTC; path=/";
                 location.reload();
             };
 
