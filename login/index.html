@@ -136,35 +136,35 @@
         </div>
         <script>
 
-            var submittedUsername;
-            var submittedPassword;
-            var usernameIsCorrect;
-            var passwordIsCorrect;
+            let submittedUsername;
+            let submittedPassword;
+            let usernameIsCorrect;
+            let passwordIsCorrect;
 
             if (!(document.cookie.indexOf("loggedIn=true") === -1)) { // If that condition is true, that means the user IS logged in.
                 location.replace("/watch");
             };
 
-            var logIn = function() {
+            const logIn = function() {
                 document.cookie = "loggedIn=true; path=/";
                 document.cookie = "admin=false; path=/"
                 location.replace("/watch");
             };
 
-            var logInAdmin = function() {
+            const logInAdmin = function() {
                 document.cookie = "loggedIn=true; path=/;";
                 document.cookie = "admin=true; path=/"
                 location.replace("/watch");
             };
 
-            var infoIsWrong = function() {
+            const infoIsWrong = function() {
                 document.getElementById("password-textbox").value = "";
                 document.getElementById("username-textbox").value = "";
                 
                 document.getElementById("text-container").innerHTML = '<p class="luckiest-guy" id="incorrect-message">The username/password you entered is incorrect.</p>';
             };
 
-            var checkUsername = function() {
+            const checkUsername = function() {
                 if (submittedUsername.toLowerCase() === "peterbrobro" || submittedUsername.toLowerCase() === "admin") {
                     usernameIsCorrect = true;
                 }
@@ -173,7 +173,7 @@
                 };
             };
 
-            var checkPassword = function() {
+            const checkPassword = function() {
                 if (usernameIsCorrect) {
                     if (submittedUsername.toLowerCase() === "peterbrobro") {
                         if (submittedPassword === "k9sqyvb6cr7") {
@@ -196,7 +196,7 @@
                 };
             };
 
-            var submitInfo = function() {
+            const submitInfo = function() {
                 submittedUsername = document.getElementById("username-textbox").value;
                 submittedPassword = document.getElementById("password-textbox").value;
 
